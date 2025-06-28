@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>STYLE RENTALS | Premium Clothing Rental Service</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #8a6d62;
+        --secondary: #d4c1b3;
+        --accent: #c9a88e;
+        --light: #f8f5f2;
+        --dark: #3d3028;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        background-color: var(--light);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Playfair Display", serif;
+        color: var(--dark);
+      }
+
+      /* Header Styles */
+      .top-header {
+        background-color: var(--light);
+        padding: 20px 0;
+        position: relative;
+        z-index: 900;
+      }
+
+      .brand {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .brand:hover {
+        color: var(--dark);
+      }
+
+      .hero-slider {
+        height: 70vh;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.8);
+      }
+
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 10;
+        width: 80%;
+      }
+
+      .hero-content h2 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: white;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn-primary-custom {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+      }
+
+      .btn-primary-custom:hover {
+        background-color: var(--dark);
+        border-color: var(--dark);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Navigation */
+      #header {
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .nav-menu {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .nav-menu li {
+        margin: 0 15px;
+      }
+
+      .nav-menu a {
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        position: relative;
+        padding: 5px 0;
+      }
+
+      .nav-menu a:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary);
+        transition: width 0.3s;
+      }
+
+      .nav-menu a:hover:after,
+      .nav-menu .active a:after {
+        width: 100%;
+      }
+
+      .social-nav a {
+        color: var(--dark);
+        margin-left: 10px;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      .social-nav a:hover {
+        color: var(--primary);
+      }
+
+      /* Section Styling */
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+        position: relative;
+        padding-bottom: 15px;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .section-header:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--primary);
+      }
+
+      .how-it-works {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .how-it-works h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: #2b2e4a;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .step {
+        background: #f4f5f8;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        font-weight: 500;
+      }
+
+      .step h3 {
+        color: var(--primary);
+      }
+
+      .catalog .items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      /* About Section */
+      #about {
+        padding: 100px 0;
+        background-color: white;
+      }
+
+      .img-cols img {
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .content-cols {
+        display: flex;
+        align-items: center;
+      }
+
+      .content-col h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .content-col p {
+        margin-bottom: 25px;
+        line-height: 1.8;
+      }
+
+      /* Collection Section */
+      #collection {
+        padding: 100px 0;
+        background-color: var(--light);
+      }
+
+      .collection-filter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        background: none;
+        border: none;
+        padding: 8px 20px;
+        margin: 0 5px 10px;
+        border-radius: 30px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 30px;
+      }
+
+      .collection-item {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .collection-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .collection-img {
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .collection-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .collection-item:hover .collection-img img {
+        transform: scale(1.05);
+      }
+
+      .collection-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(138, 109, 98, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .collection-item:hover .collection-overlay {
+        opacity: 1;
+      }
+
+      .overlay-content {
+        text-align: center;
+        color: white;
+        padding: 20px;
+      }
+
+      .overlay-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .overlay-content .price {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        display: block;
+        font-weight: 500;
+      }
+
+      .collection-details {
+        padding: 20px;
+      }
+
+      .collection-details h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+
+      .collection-details .price {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      .collection-details p {
+        color: #777;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      /* Booking Section */
+      #booking {
+        padding: 100px 0;
+        background-color: white;
+      }
+
+      .booking-form {
+        background: var(--light);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .booking-form label {
+        font-weight: 500;
+        margin-bottom: 8px;
+        display: block;
+        color: var(--dark);
+      }
+
+      .booking-form .form-control {
+        height: 50px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+        transition: border-color 0.3s;
+      }
+
+      .booking-form .form-control:focus {
+        border-color: var(--primary);
+        box-shadow: none;
+      }
+
+      .booking-form button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Testimonials */
+      #testimonials {
+        padding: 100px 0;
+        background-color: var(--light);
+      }
+
+      .testimonial-card {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        height: 100%;
+      }
+
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+
+      .testimonial-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .testimonial-info h4 {
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+      }
+
+      .testimonial-info .rating {
+        color: #ffc107;
+        font-size: 0.9rem;
+      }
+
+      .testimonial-content p {
+        font-style: italic;
+        line-height: 1.8;
+        color: #555;
+      }
+
+      /* Newsletter */
+      #newsletter {
+        padding: 80px 0;
+        background: linear-gradient(
+            rgba(61, 48, 40, 0.9),
+            rgba(61, 48, 40, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+      }
+
+      .newsletter-form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .newsletter-form input {
+        height: 55px;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        padding: 0 25px;
+        width: 70%;
+      }
+
+      .newsletter-form button {
+        height: 55px;
+        border: none;
+        background: var(--primary);
+        color: white;
+        padding: 0 30px;
+        border-radius: 0 30px 30px 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: background 0.3s;
+      }
+
+      .newsletter-form button:hover {
+        background: var(--dark);
+      }
+
+      /* Footer */
+      #footer {
+        padding: 60px 0 30px;
+        background-color: var(--dark);
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .footer-logo {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-about p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+
+      .footer-links h4 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 1.3rem;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-links h4:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: var(--primary);
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .social-links {
+        display: flex;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+
+      .social-links a:hover {
+        background-color: var(--primary);
+        transform: translateY(-3px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        margin-top: 50px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Product Carousel */
+      .product-carousel {
+        position: relative;
+        height: 100%;
+      }
+
+      .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+      }
+
+      .carousel-controls {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 20;
+      }
+
+      .carousel-prev,
+      .carousel-next {
+        background: rgba(255, 255, 255, 0.7);
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 0 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .carousel-prev:hover,
+      .carousel-next:hover {
+        background: var(--primary);
+        color: white;
+      }
+
+      /* Cart styles */
+      #cart-icon {
+        position: relative;
+        color: var(--dark);
+      }
+
+      #cart-icon .badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        font-size: 0.6rem;
+      }
+
+      .cart-item img,
+      .checkout-item img {
+        object-fit: cover;
+      }
+
+      .toast {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 991px) {
+        .hero-content h2 {
+          font-size: 2.8rem;
+        }
+
+        .nav-menu {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav-menu li {
+          margin: 10px 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h2 {
+          font-size: 2.2rem;
+        }
+
+        .section-header h2 {
+          font-size: 2rem;
+        }
+
+        .content-col,
+        .img-cols {
+          margin-bottom: 40px;
+        }
+
+        .newsletter-form input {
+          width: 100%;
+          border-radius: 30px;
+          margin-bottom: 15px;
+        }
+
+        .newsletter-form button {
+          width: 100%;
+          border-radius: 30px;
+        }
+
+        .cart-item,
+        .checkout-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .cart-item > div,
+        .checkout-item > div {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .cart-item .text-end,
+        .checkout-item .text-end {
+          text-align: left !important;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-content h2 {
+          font-size: 1.8rem;
+        }
+
+        .btn-primary-custom {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Header Start -->
+    <section class="top-header">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-12">
+            <a class="brand" href="index.html">STYLE RENTALS</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Top Header End -->
+
+    <!-- Hero Slider Start -->
+    <div class="hero-slider">
+      <img
+        src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
+        alt="Fashion Collection"
+      />
+      <div class="hero-content">
+        <h2>Elevate Your Style Without The Commitment</h2>
+        <p class="lead mb-4">Premium clothing rentals for every occasion</p>
+        <a href="#collection" class="btn btn-primary-custom"
+          >Explore Collection</a
+        >
+      </div>
+    </div>
+    <!-- Hero Slider End -->
+
+    <!-- Header Start -->
+    <header id="header">
+      <div class="container">
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+
+        <nav class="nav social-nav pull-right d-none d-lg-inline">
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-pinterest"></i></a>
+          <a
+            href="#"
+            id="cart-icon"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+          >
+            <i class="bi bi-cart"></i>
+            <span id="cart-count" class="badge bg-primary">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- About Section Start -->
+    <div id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p class="text-muted">
+            Discover our story and passion for sustainable fashion
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 img-cols">
+            <div class="img-col">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                alt="About Us"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 content-cols">
+            <div class="content-col">
+              <h3>Redefining Fashion Consumption</h3>
+              <p>
+                At Style Rentals, we believe you should experience luxury
+                fashion without the long-term commitment or environmental
+                impact. Our curated collection features designer pieces for
+                every occasion, from elegant evening gowns to sharp business
+                attire.
+              </p>
+              <p>
+                We meticulously clean and maintain every garment to ensure you
+                receive it in perfect condition. Our sustainable approach
+                reduces fashion waste while giving you access to premium styles
+                at a fraction of the retail price.
+              </p>
+              <a href="#collection" class="btn btn-primary-custom"
+                >View Collection</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Section End -->
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">How It Works</h2>
+          <div class="steps">
+            <div class="step">
+              <h3>1. Browse Dresses</h3>
+              <p>
+                Explore our stylish catalog and choose your favorite attire.
+              </p>
+            </div>
+            <div class="step">
+              <h3>2. Book Online</h3>
+              <p>Select size, duration, and send us your booking request.</p>
+            </div>
+            <div class="step">
+              <h3>3. Get Delivered</h3>
+              <p>We deliver your outfit or make it available for pickup.</p>
+            </div>
+            <div class="step">
+              <h3>4. Return After Use</h3>
+              <p>Drop it off or schedule a return pickup with ease.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection Section Start -->
+    <div id="collection">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Premium Collection</h2>
+          <p class="text-muted">Exquisite outfits for your special occasions</p>
+        </div>
+
+        <div class="collection-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="wedding-dresses">
+            Wedding Dresses
+          </button>
+          <button class="filter-btn" data-filter="wedding-sarees">
+            Wedding Sarees
+          </button>
+          <button class="filter-btn" data-filter="handloom">
+            Handloom Sarees
+          </button>
+          <button class="filter-btn" data-filter="gowns">Gowns</button>
+          <button class="filter-btn" data-filter="party-wear">
+            Party Wear
+          </button>
+        </div>
+
+        <div class="collection-grid">
+          <!-- Wedding Dress 1 -->
+          <div class="collection-item" data-category="wedding-dresses women">
+            <div class="collection-img">
+              <div class="product-carousel">
+                <div class="carousel-slide active">
+                  <img src="images/dress2.1.jpg" alt="Bridal Gown Front" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="images/dress2.2.jpg" alt="Bridal Gown Back" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="images/dress2.3.jpg" alt="Bridal Gown Detail" />
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+              <div class="collection-overlay">
+                <div class="overlay-content">
+                  <h3>Sequin Gown</h3>
+                  <span class="price">Rs.5000 for 5 days</span>
+                  <button
+                    class="btn btn-primary-custom add-to-cart"
+                    data-id="sequin-gown"
+                    data-name="Sequin Gown"
+                    data-price="5000"
+                    data-days="7"
+                    data-size="M"
+                    data-color="Royal Blue,Deep Wine"
+                    data-image="images/dress2.1.jpg"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="collection-details">
+              <h3>Sequin Gown</h3>
+              <span class="price">Rs.5000 for 7 days</span>
+              <p>
+                Luxury seqin bridal gown with intricate lace detailing and
+                train. Perfect for weddings and formal events. Includes matching
+                veil.
+              </p>
+              <div class="d-flex justify-content-between">
+                <span><i class="bi bi-tag"></i> Size: free</span>
+                <span><i class="bi bi-palette"></i> Royal Blue</span>
+              </div>
+              <div class="mt-2">
+                <span><i class="bi bi-rulers"></i> Length: 58 inches</span>
+              </div>
+              <button
+                class="btn btn-sm btn-outline-secondary mt-2 view-details"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Wedding Saree 1 -->
+          <div class="collection-item" data-category="wedding-sarees women">
+            <div class="collection-img">
+              <div class="product-carousel">
+                <div class="carousel-slide active">
+                  <img
+                    src="images/dress9.1.jpg"
+                    alt="Terracotta Cotton Saree"
+                  />
+                </div>
+                <div class="carousel-slide">
+                  <img src="images/dress9.2.jpg" alt="Olive Green Cotton Saree" />
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+              <div class="collection-overlay">
+                <div class="overlay-content">
+                  <h3>Terracotta Cotton Saree</h3>
+                  <span class="price">₹1499 for 5 days</span>
+                  <button
+                    class="btn btn-primary-custom add-to-cart"
+                    data-id="Cotton-saree"
+                    data-name="Terracotta Cotton Saree"
+                    data-price="1499"
+                    data-days="5"
+                    data-size="One Size"
+                    data-color="Terracotta & Gold"
+                    data-image="images/dress9.1.jpg"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="collection-details">
+              <h3>Terracotta Cotton Saree</h3>
+              <span class="price">₹1499 for 5 days</span>
+              <p>
+                Light cotton saree with zari border. Comes with blouse piece.
+              </p>
+              <div class="d-flex justify-content-between">
+                <span><i class="bi bi-tag"></i> One Size</span>
+                <span><i class="bi bi-palette"></i> Terracotta & Gold</span>
+              </div>
+              <div class="mt-2">
+                <span><i class="bi bi-rulers"></i> Length: 5.5 meters</span>
+              </div>
+              <button
+                class="btn btn-sm btn-outline-secondary mt-2 view-details"
+              >
+                View Details
+              </button>
+            </div>
+          </div><!-- Wedding Saree 1 -->
+          <div class="collection-item" data-category="wedding-sarees women">
+            <div class="collection-img">
+              <div class="product-carousel">
+                <div class="carousel-slide active">
+                  <img
+                    src="images/dress9.1.jpg"
+                    alt="Terracotta Cotton Saree"
+                  />
+                </div>
+                <div class="carousel-slide">
+                  <img src="images/dress9.2.jpg" alt="Olive Green Cotton Saree" />
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+              <div class="collection-overlay">
+                <div class="overlay-content">
+                  <h3>Terracotta Cotton Saree</h3>
+                  <span class="price">₹1499 for 5 days</span>
+                  <button
+                    class="btn btn-primary-custom add-to-cart"
+                    data-id="Cotton-saree"
+                    data-name="Terracotta Cotton Saree"
+                    data-price="1499"
+                    data-days="5"
+                    data-size="One Size"
+                    data-color="Terracotta & Gold"
+                    data-image="images/dress9.1.jpg"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="collection-details">
+              <h3>Terracotta Cotton Saree</h3>
+              <span class="price">₹1499 for 5 days</span>
+              <p>
+                Light cotton saree with zari border. Comes with blouse piece.
+              </p>
+              <div class="d-flex justify-content-between">
+                <span><i class="bi bi-tag"></i> One Size</span>
+                <span><i class="bi bi-palette"></i> Terracotta & Gold</span>
+              </div>
+              <div class="mt-2">
+                <span><i class="bi bi-rulers"></i> Length: 5.5 meters</span>
+              </div>
+              <button
+                class="btn btn-sm btn-outline-secondary mt-2 view-details"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+
+
+          <!-- Handloom Saree -->
+          <div class="collection-item" data-category="handloom women">
+            <div class="collection-img">
+              <div class="product-carousel">
+                <div class="carousel-slide active">
+                  <img
+                    src="images/kanjivaram-saree-1.jpg"
+                    alt="Kanjivaram Saree"
+                  />
+                </div>
+                <div class="carousel-slide">
+                  <img src="images/kanjivaram-saree-2.jpg" alt="Saree Border" />
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+              <div class="collection-overlay">
+                <div class="overlay-content">
+                  <h3>Kanjivaram Silk Saree</h3>
+                  <span class="price">₹11,999 for 5 days</span>
+                  <button
+                    class="btn btn-primary-custom add-to-cart"
+                    data-id="kanjivaram-saree"
+                    data-name="Kanjivaram Silk Saree"
+                    data-price="11999"
+                    data-days="5"
+                    data-size="One Size"
+                    data-color="Peach & Gold"
+                    data-image="images/kanjivaram-saree-1.jpg"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="collection-details">
+              <h3>Kanjivaram Silk Saree</h3>
+              <span class="price">₹11,999 for 5 days</span>
+              <p>
+                Traditional handloom Kanjivaram with temple border design. Pure
+                silk with zari work. Includes matching blouse.
+              </p>
+              <div class="d-flex justify-content-between">
+                <span><i class="bi bi-tag"></i> One Size</span>
+                <span><i class="bi bi-palette"></i> Peach & Gold</span>
+              </div>
+              <div class="mt-2">
+                <span><i class="bi bi-rulers"></i> Length: 6 meters</span>
+              </div>
+              <button
+                class="btn btn-sm btn-outline-secondary mt-2 view-details"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Gown -->
+          <div class="collection-item" data-category="gowns women">
+            <div class="collection-img">
+              <div class="product-carousel">
+                <div class="carousel-slide active">
+                  <img src="images/evening-gown-1.jpg" alt="Evening Gown" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="images/evening-gown-2.jpg" alt="Gown Back" />
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+              <div class="collection-overlay">
+                <div class="overlay-content">
+                  <h3>Royal Blue Evening Gown</h3>
+                  <span class="price">₹9,499 for 4 days</span>
+                  <button
+                    class="btn btn-primary-custom add-to-cart"
+                    data-id="blue-gown"
+                    data-name="Royal Blue Evening Gown"
+                    data-price="9499"
+                    data-days="4"
+                    data-size="L"
+                    data-color="Royal Blue"
+                    data-image="images/evening-gown-1.jpg"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="collection-details">
+              <h3>Royal Blue Evening Gown</h3>
+              <span class="price">₹9,499 for 4 days</span>
+              <p>
+                Floor-length gown with satin finish and delicate beading.
+                Perfect for galas and formal events.
+              </p>
+              <div class="d-flex justify-content-between">
+                <span><i class="bi bi-tag"></i> Size: L</span>
+                <span><i class="bi bi-palette"></i> Royal Blue</span>
+              </div>
+              <div class="mt-2">
+                <span><i class="bi bi-rulers"></i> Length: 62 inches</span>
+              </div>
+              <button
+                class="btn btn-sm btn-outline-secondary mt-2 view-details"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- Dress 9.1 -->
+          <div class="collection-item" data-category="cotton women">
+            <div class="collection-img">
+              <img src="images/dress9.1.jpg" alt="Terracotta Cotton Saree" />
+              <div class="collection-overlay">
+                <div class="overlay-content">
+                  <h3>Terracotta Cotton Saree</h3>
+                  <span class="price">₹1,499 for 5 days</span>
+                  <button
+                    class="btn btn-primary-custom add-to-cart"
+                    data-id="dress9.1"
+                    data-name="Terracotta Cotton Saree"
+                    data-price="1499"
+                    data-days="5"
+                    data-size="One Size"
+                    data-color="Terracotta & Gold"
+                    data-image="images/dress9.1.jpg"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="collection-details">
+              <h3>Terracotta Cotton Saree</h3>
+              <span class="price">₹1,499 for 5 days</span>
+              <p>
+                Light cotton saree with zari border. Comes with blouse piece.
+              </p>
+              <div class="d-flex justify-content-between">
+                <span><i class="bi bi-tag"></i> One Size</span>
+                <span><i class="bi bi-palette"></i> Terracotta & Gold</span>
+              </div>
+              <div class="mt-2">
+                <span><i class="bi bi-rulers"></i> Length: 6 meters</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Party Wear -->
+          <div class="collection-item" data-category="party-wear women">
+            <div class="collection-img">
+              <div class="product-carousel">
+                <div class="carousel-slide active">
+                  <img src="images/cocktail-dress-1.jpg" alt="Cocktail Dress" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="images/cocktail-dress-2.jpg" alt="Dress Detail" />
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-prev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-next">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+              <div class="collection-overlay">
+                <div class="overlay-content">
+                  <h3>Sequinned Cocktail Dress</h3>
+                  <span class="price">₹6,499 for 3 days</span>
+                  <button
+                    class="btn btn-primary-custom add-to-cart"
+                    data-id="cocktail-dress"
+                    data-name="Sequinned Cocktail Dress"
+                    data-price="6499"
+                    data-days="3"
+                    data-size="S"
+                    data-color="Silver"
+                    data-image="images/cocktail-dress-1.jpg"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="collection-details">
+              <h3>Sequinned Cocktail Dress</h3>
+              <span class="price">₹6,499 for 3 days</span>
+              <p>
+                Sparkling sequinned dress perfect for parties and celebrations.
+                Features a flattering A-line silhouette.
+              </p>
+              <div class="d-flex justify-content-between">
+                <span><i class="bi bi-tag"></i> Size: S</span>
+                <span><i class="bi bi-palette"></i> Silver</span>
+              </div>
+              <div class="mt-2">
+                <span><i class="bi bi-rulers"></i> Length: 36 inches</span>
+              </div>
+              <button
+                class="btn btn-sm btn-outline-secondary mt-2 view-details"
+              >
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Collection Section End -->
+
+    <!-- Booking Section Start -->
+    <div id="booking">
+      <div class="container">
+        <div class="section-header">
+          <h2>Complete Your Rental</h2>
+          <p class="text-muted">Confirm your outfit rental details</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form id="rentingForm">
+              <div class="mb-4">
+                <h4>Your Rental Items</h4>
+                <div id="checkout-items" class="mb-4">
+                  <!-- Items will be loaded here -->
+                  <p class="text-center py-3">Your cart is empty</p>
+                </div>
+                <div class="text-end">
+                  <h5>Total: <span id="checkout-total">₹0</span></h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label>First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label>Last Name</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label>Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label>Rental Start Date</label>
+                  <input
+                    type="date"
+                    name="startDate"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label>Rental End Date</label>
+                  <input
+                    type="date"
+                    name="endDate"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label>Delivery Address</label>
+                <textarea
+                  name="address"
+                  class="form-control"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label>Special Requests</label>
+                <textarea
+                  name="specialRequests"
+                  class="form-control"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <div class="mb-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="termsCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="termsCheck">
+                    I agree to the
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#termsModal"
+                      >terms and conditions</a
+                    >
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary-custom btn-lg">
+                <i class="bi bi-check-circle"></i> Confirm Rental
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Booking Section End -->
+
+    <!-- Testimonials Section Start -->
+    <div id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Customers Say</h2>
+          <p class="text-muted">Hear from people who've used our service</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-img">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/32.jpg"
+                    alt="Sarah J."
+                  />
+                </div>
+                <div class="testimonial-info">
+                  <h4>Sarah J.</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "The bridal lehenga I rented was absolutely stunning and in
+                  perfect condition. Saved me hundreds compared to buying!"
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-img">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/45.jpg"
+                    alt="Raj P."
+                  />
+                </div>
+                <div class="testimonial-info">
+                  <h4>Raj P.</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "Perfect sherwani for my brother's wedding. The fit was
+                  excellent and the delivery was right on time. Will definitely
+                  use again."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-img">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/68.jpg"
+                    alt="Priya M."
+                  />
+                </div>
+                <div class="testimonial-info">
+                  <h4>Priya M.</h4>
+                  <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-content">
+                <p>
+                  "Loved the silk saree I rented for Diwali party. Got so many
+                  compliments! The cleaning and packaging was very
+                  professional."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials Section End -->
+
+    <!-- Newsletter Section Start -->
+    <div id="newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="text-white mb-4">Join Our Newsletter</h2>
+            <p class="text-white mb-5">
+              Subscribe to get updates on new arrivals, exclusive offers and
+              fashion tips
+            </p>
+            <form class="newsletter-form">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email address"
+                />
+                <button class="btn" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Newsletter Section End -->
+
+    <!-- Footer Start -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="#" class="footer-logo">STYLE RENTALS</a>
+            <p>
+              Premium outfit rental service for weddings, parties and special
+              occasions. Sustainable fashion for memorable moments.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-pinterest"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#collection">Collection</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Categories</h4>
+            <ul>
+              <li>
+                <a href="#collection" data-filter="wedding-dresses"
+                  >Wedding Dresses</a
+                >
+              </li>
+              <li>
+                <a href="#collection" data-filter="wedding-sarees"
+                  >Wedding Sarees</a
+                >
+              </li>
+              <li>
+                <a href="#collection" data-filter="handloom">Handloom Sarees</a>
+              </li>
+              <li><a href="#collection" data-filter="gowns">Gowns</a></li>
+              <li>
+                <a href="#collection" data-filter="party-wear">Party Wear</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              123 Fashion Street<br />
+              Style District, Mumbai 400001<br />
+              India <br /><br />
+              <strong>Phone:</strong> +91 98765 43210<br />
+              <strong>Email:</strong> info@stylerentals.com<br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>Style Rentals</strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Terms & Conditions</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Rental Period</h6>
+            <p>
+              The rental period begins on the start date selected and ends on
+              the return date. Late returns will incur additional charges.
+            </p>
+
+            <h6>Care Instructions</h6>
+            <p>
+              Outfits must be returned in the same condition as received. Any
+              stains or damage will result in cleaning or repair fees.
+            </p>
+
+            <h6>Cancellation Policy</h6>
+            <p>
+              Cancellations made more than 7 days before the rental period will
+              receive a full refund. Cancellations within 7 days receive 50%
+              refund.
+            </p>
+
+            <h6>Security Deposit</h6>
+            <p>
+              A security deposit may be required for certain high-value items,
+              refundable upon safe return of the outfit.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+          a
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Your Rental Cart</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="cart-items">
+              <!-- Cart items will be loaded here -->
+              <p class="text-center py-3">Your cart is empty</p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <h5>Total: <span id="cart-total">₹0</span></h5>
+              <button id="checkout-btn" class="btn btn-primary-custom" disabled>
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalTitle">Product Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="product-carousel-modal">
+                  <!-- Images will be loaded here -->
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h3 id="productModalName"></h3>
+                <div class="price mb-3" id="productModalPrice"></div>
+                <p id="productModalDescription"></p>
+                <div class="details">
+                  <p>
+                    <strong>Size:</strong> <span id="productModalSize"></span>
+                  </p>
+                  <p>
+                    <strong>Color:</strong> <span id="productModalColor"></span>
+                  </p>
+                  <p>
+                    <strong>Material:</strong>
+                    <span id="productModalMaterial"></span>
+                  </p>
+                  <p>
+                    <strong>Care Instructions:</strong>
+                    <span id="productModalCare"></span>
+                  </p>
+                </div>
+                <button class="btn btn-primary-custom mt-3 add-to-cart-modal">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Format price in Indian Rupees
+      function formatPrice(amount) {
+        return "₹" + amount.toLocaleString("en-IN");
+      }
+
+      // Show toast notification
+      function showToast(message, type = "success") {
+        const toastEl = document.createElement("div");
+        toastEl.className = `toast align-items-center text-white bg-${type}`;
+        toastEl.innerHTML = `
+          <div class="d-flex">
+            <div class="toast-body">
+              ${message}
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+          </div>
+        `;
+        document.body.appendChild(toastEl);
+
+        const toast = new bootstrap.Toast(toastEl, {
+          animation: true,
+          autohide: true,
+          delay: 3000,
+        });
+        toast.show();
+
+        // Remove toast after it hides
+        setTimeout(() => {
+          document.body.removeChild(toastEl);
+        }, 3000);
+      }
+
+      // Cart functionality
+      let cart = {
+        items: [],
+        get total() {
+          return this.items.reduce(
+            (total, item) => total + item.price * item.days * item.quantity,
+            0
+          );
+        },
+      };
+
+      // Update cart UI
+      function updateCartUI() {
+        const cartItemsEl = document.getElementById("cart-items");
+        const cartTotalEl = document.getElementById("cart-total");
+        const cartCountEl = document.getElementById("cart-count");
+        const checkoutBtn = document.getElementById("checkout-btn");
+        const checkoutItemsEl = document.getElementById("checkout-items");
+        const checkoutTotalEl = document.getElementById("checkout-total");
+
+        if (cart.items.length === 0) {
+          cartItemsEl.innerHTML =
+            '<p class="text-center py-3">Your cart is empty</p>';
+          checkoutItemsEl.innerHTML =
+            '<p class="text-center py-3">Your cart is empty</p>';
+          checkoutBtn.disabled = true;
+        } else {
+          cartItemsEl.innerHTML = cart.items
+            .map(
+              (item, index) => `
+      <div class="cart-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <img src="${
+            item.image
+          }" width="60" height="60" class="rounded me-3" alt="${item.name}">
+          <div>
+            <h6 class="mb-1">${item.name}</h6>
+            <small class="text-muted">Size: ${item.size} | Color: ${
+                item.color
+              }</small>
+            <div>${item.days} days rental</div>
+          </div>
+        </div>
+        <div class="text-end">
+          <div>${formatPrice(item.price)} × ${item.quantity}</div>
+          <div class="fw-bold">${formatPrice(item.price * item.quantity)}</div>
+          <button class="btn btn-sm btn-outline-danger remove-item" data-index="${index}">
+            Remove
+          </button>
+        </div>
+      </div>
+    `
+            )
+            .join("");
+
+          checkoutItemsEl.innerHTML = cart.items
+            .map(
+              (item) => `
+      <div class="checkout-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+        <div class="d-flex align-items-center">
+          <img src="${
+            item.image
+          }" width="60" height="60" class="rounded me-3" alt="${item.name}">
+          <div>
+            <h6 class="mb-1">${item.name}</h6>
+            <small class="text-muted">Size: ${item.size} | Color: ${
+                item.color
+              }</small>
+            <div>${item.quantity} × ${formatPrice(item.price)} for ${
+                item.days
+              } days</div>
+            <div class="fw-bold">Subtotal: ${formatPrice(
+              item.price * item.days * item.quantity
+            )}</div>
+          </div>
+        </div>
+      </div>
+    `
+            )
+            .join("");
+
+          checkoutBtn.disabled = false;
+        }
+
+        cartTotalEl.textContent = formatPrice(cart.total);
+        checkoutTotalEl.textContent = formatPrice(cart.total);
+        cartCountEl.textContent = cart.items.reduce(
+          (sum, item) => sum + item.quantity,
+          0
+        );
+      }
+      // Add to cart
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const item = {
+            id: button.dataset.id,
+            name: button.dataset.name,
+            price: parseFloat(button.dataset.price),
+            days: parseInt(button.dataset.days),
+            size: button.dataset.size || "M",
+            color: button.dataset.color || "As pictured",
+            quantity: 1,
+            image:
+              button.dataset.image ||
+              button.closest(".collection-item").querySelector("img").src,
+          };
+
+          // Check if item already in cart
+          const existingItem = cart.items.find(
+            (i) =>
+              i.id === item.id && i.size === item.size && i.color === item.color
+          );
+
+          if (existingItem) {
+            existingItem.quantity += 1;
+          } else {
+            cart.items.push(item);
+          }
+
+          updateCartUI();
+          showToast(`${item.name} added to cart`);
+        });
+      });
+
+      // Remove from cart
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("remove-item")) {
+          const index = parseInt(e.target.dataset.index);
+          const removedItem = cart.items[index];
+          cart.items.splice(index, 1);
+          updateCartUI();
+          showToast(`${removedItem.name} removed from cart`, "danger");
+        }
+      });
+
+      // Checkout button
+      document.getElementById("checkout-btn").addEventListener("click", () => {
+        const cartModal = bootstrap.Modal.getInstance(
+          document.getElementById("cartModal")
+        );
+        cartModal.hide();
+
+        // Update the checkout items display
+        const checkoutItemsEl = document.getElementById("checkout-items");
+        checkoutItemsEl.innerHTML = cart.items
+          .map(
+            (item) => `
+    <div class="checkout-item d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+      <div class="d-flex align-items-center">
+        <img src="${
+          item.image
+        }" width="60" height="60" class="rounded me-3" alt="${item.name}">
+        <div>
+          <h6 class="mb-1">${item.name}</h6>
+          <small class="text-muted">Size: ${item.size} | Color: ${
+              item.color
+            }</small>
+          <div>${item.quantity} × ${formatPrice(item.price)} for ${
+              item.days
+            } days</div>
+          <div class="fw-bold">Subtotal: ${formatPrice(
+            item.price * item.days * item.quantity
+          )}</div>
+        </div>
+      </div>
+    </div>
+  `
+          )
+          .join("");
+
+        // Update the total
+        document.getElementById("checkout-total").textContent = formatPrice(
+          cart.total
+        );
+
+        // Scroll to the booking section
+        window.location.href = "#booking";
+      });
+
+      document
+        .getElementById("rentingForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          // Disable submit button to prevent multiple submissions
+          const submitButton = this.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+          submitButton.innerHTML =
+            '<span class="spinner-border spinner-border-sm"></span> Processing...';
+
+          try {
+            // Validate dates
+            const startDate = new Date(this.startDate.value);
+            const endDate = new Date(this.endDate.value);
+
+            if (startDate >= endDate) {
+              showToast("End date must be after start date", "danger");
+              submitButton.disabled = false;
+              submitButton.innerHTML =
+                '<i class="bi bi-check-circle"></i> Confirm Rental';
+              return;
+            }
+
+            const formData = {
+              customer: {
+                firstName: this.firstName.value,
+                lastName: this.lastName.value,
+                email: this.email.value,
+                phone: this.phone.value,
+                address: this.address.value,
+              },
+              items: cart.items.map((item) => ({
+                productId: item.id,
+                name: item.name,
+                price: item.price,
+                days: item.days,
+                size: item.size,
+                color: item.color,
+                quantity: item.quantity,
+              })),
+              startDate: this.startDate.value,
+              endDate: this.endDate.value,
+              specialRequests: this.specialRequests.value,
+              totalAmount: cart.total,
+              status: "pending",
+            };
+
+            const response = await fetch("http://localhost:5000/api/rentals", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            });
+
+            // Check if response is JSON
+            const contentType = response.headers.get("content-type");
+            if (!contentType || !contentType.includes("application/json")) {
+              const text = await response.text();
+              throw new Error(text || "Invalid server response");
+            }
+
+            const data = await response.json();
+
+            if (!response.ok) {
+              throw new Error(data.message || "Failed to submit rental");
+            }
+
+            // Success
+            showToast("Rental submitted successfully! We'll contact you soon.");
+
+            // Reset cart and form
+            cart.items = [];
+            updateCartUI();
+            this.reset();
+          } catch (error) {
+            console.error("Error:", error);
+            showToast(
+              error.message || "Failed to submit rental. Please try again.",
+              "danger"
+            );
+          } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML =
+              '<i class="bi bi-check-circle"></i> Confirm Rental';
+          }
+        });
+
+      // Product carousel functionality
+      document.querySelectorAll(".product-carousel").forEach((carousel) => {
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const prevBtn = carousel.parentElement.querySelector(".carousel-prev");
+        const nextBtn = carousel.parentElement.querySelector(".carousel-next");
+        let currentSlide = 0;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+          });
+        }
+
+        prevBtn.addEventListener("click", () => {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        });
+
+        nextBtn.addEventListener("click", () => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        });
+
+        // Initialize
+        showSlide(0);
+      });
+
+      // Product details modal
+      document.querySelectorAll(".view-details").forEach((button) => {
+        button.addEventListener("click", () => {
+          const item = button.closest(".collection-item");
+          const title = item.querySelector(
+            ".collection-details h3"
+          ).textContent;
+          const price = item.querySelector(
+            ".collection-details .price"
+          ).textContent;
+          const description = item.querySelector(
+            ".collection-details p"
+          ).textContent;
+          const size = item.querySelector(".add-to-cart").dataset.size || "M";
+          const color =
+            item.querySelector(".add-to-cart").dataset.color || "As pictured";
+
+          document.getElementById("productModalTitle").textContent = title;
+          document.getElementById("productModalName").textContent = title;
+          document.getElementById("productModalPrice").textContent = price;
+          document.getElementById("productModalDescription").textContent =
+            description;
+          document.getElementById("productModalSize").textContent = size;
+          document.getElementById("productModalColor").textContent = color;
+          document.getElementById("productModalMaterial").textContent =
+            "Premium quality fabric";
+          document.getElementById("productModalCare").textContent =
+            "Dry clean only";
+
+          // Load carousel images
+          const carouselModal = document.querySelector(
+            ".product-carousel-modal"
+          );
+          carouselModal.innerHTML = "";
+          item
+            .querySelectorAll(".product-carousel .carousel-slide img")
+            .forEach((img) => {
+              const slide = document.createElement("div");
+              slide.className = "carousel-slide-modal";
+              slide.innerHTML = `<img src="${img.src}" class="img-fluid" alt="${img.alt}">`;
+              carouselModal.appendChild(slide);
+            });
+
+          // Set up add to cart button in modal
+          const addToCartBtn = document.querySelector(".add-to-cart-modal");
+          const originalAddToCart = item.querySelector(".add-to-cart");
+          addToCartBtn.onclick = () => {
+            originalAddToCart.click();
+            const modal = bootstrap.Modal.getInstance(
+              document.getElementById("productModal")
+            );
+            modal.hide();
+          };
+
+          const modal = new bootstrap.Modal(
+            document.getElementById("productModal")
+          );
+          modal.show();
+        });
+      });
+
+      // Collection filter
+      document.querySelectorAll(".filter-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          // Update active button
+          document.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          button.classList.add("active");
+
+          const filter = button.dataset.filter;
+          const items = document.querySelectorAll(".collection-item");
+
+          items.forEach((item) => {
+            if (filter === "all" || item.dataset.category.includes(filter)) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Sticky header
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 200) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      });
+
+      // Date Picker: Prevent past dates
+      const today = new Date().toISOString().split("T")[0];
+      document.querySelectorAll('input[type="date"]').forEach((input) => {
+        input.min = today;
+      });
+
+      // Initialize cart UI
+      updateCartUI();
+
+      // Replace your static product data with API calls
+      async function loadProducts() {
+        try {
+          const response = await fetch("http://localhost:5000/api/products");
+          const products = await response.json();
+
+          // Render products in your collection grid
+          renderProducts(products);
+        } catch (error) {
+          console.error("Error loading products:", error);
+        }
+      }
+
+      function renderProducts(products) {
+        const collectionGrid = document.querySelector(".collection-grid");
+        collectionGrid.innerHTML = "";
+
+        products.forEach((product) => {
+          const productHTML = `
+      <div class="collection-item" data-category="${product.category}">
+        <div class="collection-img">
+          <img src="${product.images[0]}" alt="${product.name}">
+          <div class="collection-overlay">
+            <div class="overlay-content">
+              <h3>${product.name}</h3>
+              <span class="price">₹${product.price.toLocaleString(
+                "en-IN"
+              )} for ${product.days} days</span>
+              <button class="btn btn-primary-custom add-to-cart" 
+                data-id="${product._id}" 
+                data-name="${product.name}"
+                data-price="${product.price}"
+                data-days="${product.days}"
+                data-size="${product.size}"
+                data-color="${product.color}"
+                data-image="${product.images[0]}">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="collection-details">
+          <h3>${product.name}</h3>
+          <span class="price">₹${product.price.toLocaleString("en-IN")} for ${
+            product.days
+          } days</span>
+          <p>${product.description}</p>
+          <div class="d-flex justify-content-between">
+            <span><i class="bi bi-tag"></i> Size: ${product.size}</span>
+            <span><i class="bi bi-palette"></i> ${product.color}</span>
+          </div>
+          <button class="btn btn-sm btn-outline-secondary mt-2 view-details" data-id="${
+            product._id
+          }">
+            View Details
+          </button>
+        </div>
+      </div>
+    `;
+          collectionGrid.insertAdjacentHTML("beforeend", productHTML);
+        });
+      }
+    </script>
+  </body>
+</html>
